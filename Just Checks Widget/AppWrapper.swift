@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let AppRelaunchTimeout: NSTimeInterval = 60 * 30   // 30 mins
+let AppRelaunchTimeout: NSTimeInterval = 60 * 60   // 60 mins
 
 class AppWrapper {
     let imageView: UIImageView
