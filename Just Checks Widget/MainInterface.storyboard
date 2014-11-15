@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Just_Checks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweetbot-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-n2-evb">
+                                <rect key="frame" x="16" y="8" width="44" height="44"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="0H5-eh-wXe"/>
+                                    <constraint firstAttribute="height" constant="44" id="hPk-96-kxf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mc4-GV-Oso" appends="YES" id="Icj-y0-gGC"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unread-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPq-hO-eCk">
+                                <rect key="frame" x="160" y="8" width="44" height="44"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BOf-fd-uOE"/>
+                                    <constraint firstAttribute="width" constant="44" id="hu7-uZ-XDL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UiA-Ax-2ZW" appends="YES" id="zSv-Mc-k9D"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h 0m 0s" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="8oL-MJ-mdu">
+                                <rect key="frame" x="212" y="8" width="55.5" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h 0m 0s" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                <rect key="frame" x="68" y="8" width="84" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="8" symbolic="YES" id="0Q0-KW-PJ6"/>
+                            <constraint firstItem="8oL-MJ-mdu" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="top" id="Hwg-FF-VD8"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="hIn-n2-evb" secondAttribute="trailing" constant="8" id="PYU-t5-KfZ"/>
+                            <constraint firstItem="hIn-n2-evb" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="Y3r-cH-dRa"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="hIn-n2-evb" secondAttribute="bottom" constant="8" id="cPK-Re-XPF"/>
+                            <constraint firstItem="8oL-MJ-mdu" firstAttribute="leading" secondItem="cPq-hO-eCk" secondAttribute="trailing" constant="8" id="d3P-Cu-45g"/>
+                            <constraint firstItem="cPq-hO-eCk" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="centerXWithinMargins" id="gd8-Xf-SRj"/>
+                            <constraint firstItem="hIn-n2-evb" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="hoc-V9-O9w"/>
+                            <constraint firstItem="cPq-hO-eCk" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="8" id="llK-0V-EMb"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="8oL-MJ-mdu" firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" id="sKr-be-5eL"/>
+                            <constraint firstItem="hIn-n2-evb" firstAttribute="top" secondItem="cPq-hO-eCk" secondAttribute="top" id="xtn-Qx-7tf"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="60"/>
+                    <connections>
+                        <outlet property="leftImageView" destination="hIn-n2-evb" id="HZb-P4-E5t"/>
+                        <outlet property="leftTimerLabel" destination="GcN-lo-r42" id="6po-aq-O1n"/>
+                        <outlet property="rightImageView" destination="cPq-hO-eCk" id="EyQ-mU-9zL"/>
+                        <outlet property="rightTimerLabel" destination="8oL-MJ-mdu" id="Me1-J5-HCK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Mc4-GV-Oso">
+                    <connections>
+                        <action selector="appTapped:" destination="M4Y-Lb-cyx" id="O4N-JJ-f3p"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UiA-Ax-2ZW">
+                    <connections>
+                        <action selector="appTapped:" destination="M4Y-Lb-cyx" id="efY-LH-tMx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="559" y="321"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tweetbot-icon.png" width="44" height="44"/>
+        <image name="unread-icon.png" width="44" height="44"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
